@@ -3,7 +3,7 @@ public class Memorize
     {
         //public Scripture proverbs = new Scripture();
         public List<string> _scriptureCopy = new List<string>(){"Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart; ", "and ", "lean ", "not ", "unto ", "thine ", "own ", "understanding. ", "In ", "all ", "thy ", "ways ", "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths."};
-        public List<string> _scripture = new List<string>(){"Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart; ", "and ", "lean ", "not ", "unto ", "thine ", "own ", "understanding. ", "In ", "all ", "thy ", "ways ", "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths."};
+        private List<string> _scripture = new List<string>(){"Trust ", "in ", "the ", "Lord ", "with ", "all ", "thine ", "heart; ", "and ", "lean ", "not ", "unto ", "thine ", "own ", "understanding. ", "In ", "all ", "thy ", "ways ", "acknowledge ", "him, ", "and ", "he ", "shall ", "direct ", "thy ", "paths."};
 
 
         public Memorize()
