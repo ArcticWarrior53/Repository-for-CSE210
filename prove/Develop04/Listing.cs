@@ -29,7 +29,7 @@ public class Listing : Exercises
             Random randomGenerator = new Random();
             int promptIndex = randomGenerator.Next(0, 5);
             string promptText = _prompts[promptIndex];
-            Console.WriteLine("List as many responses as you can to the following prompy:");
+            Console.WriteLine("List as many responses as you can to the following prompt:");
             Console.WriteLine($" --- {promptText} ---");
             Console.WriteLine("You may begin in: ");   
             countDown(5);
