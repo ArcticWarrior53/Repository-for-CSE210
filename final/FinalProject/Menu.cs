@@ -12,7 +12,7 @@ public class Menu
             Console.WriteLine(" 2 - Warrior");
             Console.WriteLine(" 3 - Mastermind");
             Console.WriteLine(" 4 - Monster");
-            Console.WriteLine(" 5 - Hybrid");
+            Console.Write("Input: ");
             int input = Int32.Parse(Console.ReadLine());
             return input;
         }

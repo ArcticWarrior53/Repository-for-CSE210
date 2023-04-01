@@ -5,6 +5,7 @@ class Program
     static void Main(string[] args)
     {
         RecordSheet recordit = new RecordSheet();
+        SaveBadguy SaveMe = new SaveBadguy();
         Menu onlyMenu = new Menu();
         int input = onlyMenu.MenuInput();
         if (input == 1)
@@ -19,8 +20,13 @@ class Program
             List<string> goals = spellboy.goalsPrompt();
             string lair = spellboy.lairPrompt();
             string visual = spellboy.descriptionPrompt();
+            string health = spellboy.SetStats(spellboy._health);
+            string strength = spellboy.SetStats(spellboy._strength);
+            string smarts = spellboy.SetStats(spellboy._smarts);
             recordit.CreateRecordSheet(name, ancestry, abilities, gear, 
-            minion, lair, visual, "Spellcaster", "Low", "Low", "Extremely High");
+            minion, lair, visual, "Spellcaster", health, strength, smarts);
+            SaveMe.SaveToFile(name, ancestry, abilities, gear, 
+            minion, lair, visual, "Spellcaster", health, strength, smarts);
 
         }
         if (input == 2)
@@ -35,8 +41,13 @@ class Program
             List<string> goals = warboy.goalsPrompt();
             string lair = warboy.lairPrompt();
             string visual = warboy.descriptionPrompt();
+            string health = warboy.SetStats(warboy._health);
+            string strength = warboy.SetStats(warboy._strength);
+            string smarts = warboy.SetStats(warboy._smarts);
             recordit.CreateRecordSheet(name, ancestry, abilities, gear, 
-            minion, lair, visual, "Warrior", "Medium", "High", "Low");
+            minion, lair, visual, "Warrior", health, strength, smarts);
+            SaveMe.SaveToFile(name, ancestry, abilities, gear, 
+            minion, lair, visual, "Warrior", health, strength, smarts);
 
         }
         if (input == 3)
@@ -51,8 +62,13 @@ class Program
             List<string> goals = mindboy.goalsPrompt();
             string lair = mindboy.lairPrompt();
             string visual = mindboy.descriptionPrompt();
+            string health = mindboy.SetStats(mindboy._health);
+            string strength = mindboy.SetStats(mindboy._strength);
+            string smarts = mindboy.SetStats(mindboy._smarts);
             recordit.CreateRecordSheet(name, ancestry, abilities, gear, 
-            minion, lair, visual, "Mastermind", "Low", "Medium", "Extremely High");
+            minion, lair, visual, "Mastermind", health, strength, smarts);
+            SaveMe.SaveToFile(name, ancestry, abilities, gear, 
+            minion, lair, visual, "Mastermind", health, strength, smarts);
 
         }
         if (input == 4)
@@ -67,8 +83,13 @@ class Program
             List<string> goals = monchboy.goalsPrompt();
             string lair = monchboy.lairPrompt();
             string visual = monchboy.descriptionPrompt();
+            string health = monchboy.SetStats(monchboy._health);
+            string strength = monchboy.SetStats(monchboy._strength);
+            string smarts = monchboy.SetStats(monchboy._smarts);
             recordit.CreateRecordSheet(name, ancestry, abilities, gear, 
-            minion, lair, visual, "Monster", "Highm", "High", "Extremely Low");
+            minion, lair, visual, "Monster", health, strength, smarts);
+            SaveMe.SaveToFile(name, ancestry, abilities, gear, 
+            minion, lair, visual, "Monster", health, strength, smarts);
 
         }
     }
