@@ -16,7 +16,7 @@ class Program
             string name = spellboy.namePrompt();
             List<string> abilities = spellboy.abilitiesPrompt();
             List<string> gear = spellboy.gearPrompt();
-            List<string> minion = spellboy.minionsPrompt();
+            List<string> minion = spellboy.minionsPrompt(10, 4);
             List<string> goals = spellboy.goalsPrompt();
             string lair = spellboy.lairPrompt();
             string visual = spellboy.descriptionPrompt();
@@ -37,7 +37,7 @@ class Program
             string name = warboy.namePrompt();
             List<string> abilities = warboy.abilitiesPrompt();
             List<string> gear = warboy.gearPrompt();
-            List<string> minion = warboy.minionsPrompt();
+            List<string> minion = warboy.minionsPrompt(10, 5);
             List<string> goals = warboy.goalsPrompt();
             string lair = warboy.lairPrompt();
             string visual = warboy.descriptionPrompt();
@@ -58,7 +58,7 @@ class Program
             string name = mindboy.namePrompt();
             List<string> abilities = mindboy.abilitiesPrompt();
             List<string> gear = mindboy.gearPrompt();
-            List<string> minion = mindboy.minionsPrompt();
+            List<string> minion = mindboy.minionsPrompt(10, 6);
             List<string> goals = mindboy.goalsPrompt();
             string lair = mindboy.lairPrompt();
             string visual = mindboy.descriptionPrompt();
@@ -79,7 +79,7 @@ class Program
             string name = monchboy.namePrompt();
             List<string> abilities = monchboy.abilitiesPrompt();
             List<string> gear = monchboy.gearPrompt();
-            List<string> minion = monchboy.minionsPrompt();
+            List<string> minion = monchboy.minionsPrompt(10, 2);
             List<string> goals = monchboy.goalsPrompt();
             string lair = monchboy.lairPrompt();
             string visual = monchboy.descriptionPrompt();

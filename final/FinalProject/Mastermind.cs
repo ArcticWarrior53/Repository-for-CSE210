@@ -89,29 +89,5 @@ public class Mastermind : BadGuy
         return _visualDescription;
 
     }
-
-    public override List<string> minionsPrompt() //randomly generates minions and adds to list
-    {
-        Console.WriteLine("Your Mastermind has the following minions:");
-        List<string> availableMin = RandomAbilities(10, 6, _ArchetypeMinions);
-        foreach (string minion in availableMin)
-        {
-            Console.WriteLine(minion);
-            _minions.Add(minion);
-        }
-        Console.WriteLine("Enter any additional minions:");
-        string additionalminion;
-        do
-        {
-            Console.Write("Minion: ");
-            additionalminion = Console.ReadLine();
-            if (additionalminion.ToLower() != "exit")
-            {
-                _minions.Add(additionalminion);
-            }
-        } while(additionalminion.ToLower() != "exit");
-        return _minions;
-
-    }
     
 }

@@ -88,28 +88,5 @@ public class Spellcaster : BadGuy
 
     }
 
-     public override List<string> minionsPrompt() //randomly generates minions and adds to list
-    {
-        Console.WriteLine("Your Spellcaster has the following minions:");
-        List<string> availableMin = RandomAbilities(10, 4, _ArchetypeMinions);
-        foreach (string minion in availableMin)
-        {
-            Console.WriteLine(minion);
-            _minions.Add(minion);
-        }
-        Console.WriteLine("Enter any additional minions, and enter 'exit' when you are ready to continue.");
-        string additionalminion;
-        do
-        {
-            Console.Write("Minion: ");
-            additionalminion = Console.ReadLine();
-            if (additionalminion.ToLower() != "exit")
-            {
-                _minions.Add(additionalminion);
-            }
-        } while(additionalminion.ToLower() != "exit");
-        
-        return _minions;
-
-    }
+     
 }

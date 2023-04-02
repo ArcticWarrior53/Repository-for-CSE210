@@ -32,28 +32,4 @@ public class Monster : BadGuy
         return _visualDescription;
 
     }
-
-    public override List<string> minionsPrompt() //randomly generates minions and adds to list
-    {
-        Console.WriteLine("Your Monster has the following minions:");
-        List<string> availableMin = RandomAbilities(10, 2, _ArchetypeMinions);
-        foreach (string minion in availableMin)
-        {
-            Console.WriteLine(minion);
-            _minions.Add(minion);
-        }
-        Console.WriteLine("Enter any additional minions:");
-        string additionalminion;
-        do
-        {
-            Console.Write("Minion: ");
-            additionalminion = Console.ReadLine();
-            if (additionalminion.ToLower() != "exit")
-            {
-                _minions.Add(additionalminion);
-            }
-        } while(additionalminion.ToLower() != "exit");
-        return _minions;
-
-    }
 }

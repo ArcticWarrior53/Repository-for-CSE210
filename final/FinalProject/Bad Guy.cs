@@ -116,11 +116,27 @@ public class BadGuy
         }
         return _gear;
     }
-    public virtual List<string> minionsPrompt() //randomly generates minions and adds to list
+    public virtual List<string> minionsPrompt(int available, int numGot) //randomly generates minions and adds to list
     {
-        Console.WriteLine("Enter the name of your minion");
-        string minion = Console.ReadLine();
-        _minions.Add(minion);
+        Console.WriteLine("Your Spellcaster has the following minions:");
+        List<string> availableMin = RandomAbilities(available, numGot, _ArchetypeMinions);
+        foreach (string minion in availableMin)
+        {
+            Console.WriteLine(minion);
+            _minions.Add(minion);
+        }
+        Console.WriteLine("Enter any additional minions, and enter 'exit' when you are ready to continue.");
+        string additionalminion;
+        do
+        {
+            Console.Write("Minion: ");
+            additionalminion = Console.ReadLine();
+            if (additionalminion.ToLower() != "exit")
+            {
+                _minions.Add(additionalminion);
+            }
+        } while(additionalminion.ToLower() != "exit");
+        
         return _minions;
 
     }
@@ -137,6 +153,7 @@ public class BadGuy
         string input;
         do 
         {
+            Console.Write("Goal: ");
             input = Console.ReadLine();
 
         } while (input.ToLower() != "exit");
